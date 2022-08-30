@@ -87,12 +87,8 @@ const config = {
                 href: 'https://whitestonedev.com.br',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/rafaelbmateus',
-              },
-              {
                 label: 'Dev Community',
-                to: 'https://dev.to/rafaelbmateus',
+                href: 'https://dev.to/rafaelbmateus',
               },
             ],
           },
