@@ -3,7 +3,7 @@ slug: welcome
 title: Criação do Blog
 description: Criando um blog para compartilhar conteúdos de desenvolvimento de software.
 authors: rafaelbmateus
-tags: [rafaelbmateus, blog, docusaurus]
+tags: [blog, docusaurus]
 ---
 
 Criando um blog para compartilhar conteúdos de desenvolvimento de software.
