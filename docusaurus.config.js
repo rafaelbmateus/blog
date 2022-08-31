@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Rafael Mateus',
   tagline: 'Software Developer',
-  url: 'https://rafaelbmateus.github.io',
+  url: 'https://blog.rafaelbmateus.com.br',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,7 +43,7 @@ const config = {
       navbar: {
         items: [
           {to: 'https://www.rafaelbmateus.com.br', label: 'Rafael Mateus', position: 'left'},
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/', label: 'Blog', position: 'left'},
           {to: '/tags', label: 'Tags', position: 'left'},
           {
             href: 'https://github.com/rafaelbmateus',
