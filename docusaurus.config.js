@@ -8,7 +8,7 @@ const config = {
   title: 'Rafael Mateus',
   tagline: 'Software Developer',
   url: 'https://rafaelbmateus.github.io',
-  baseUrl: '/blog/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'https://github.com/rafaelbmateus.png',
