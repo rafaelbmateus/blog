@@ -10,13 +10,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: redkubes/docusaurus-deploy-action@v1
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v2
         with:
-          source-folder: website
-          git-user: rafaelbmateus
-          git-password: ${{ secrets.GITHUB_TOKEN }}
-          deployment-branch: gh-pages
+          node-version: "16"
+      - name: Build Docusaurus website
+        run: |
+          npm install
+          npm run build
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
