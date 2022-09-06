@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog.rafaelbmateus.com.br/</id>
+    <title>Rafael Mateus Blog</title>
+    <updated>2022-09-05T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blog.rafaelbmateus.com.br/"/>
+    <subtitle>Rafael Mateus Blog</subtitle>
+    <icon>https://blog.rafaelbmateus.com.br/https://github.com/rafaelbmateus.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Desenhe primeiro sua interface de API, antes de começar a desenvolver]]></title>
+        <id>api-design-first</id>
+        <link href="https://blog.rafaelbmateus.com.br/api-design-first"/>
+        <updated>2022-09-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Projetar interfaces de API na maioria das vezes é a melhor forma para validar o contrato e funcionamento da API.
+Esse é o princípio do Design First de API.
+]]></summary>
+        <content type="html"><![CDATA[<p>Projetar interfaces de API na grande maioria das vezes é a melhor forma para validar o contrato e funcionamento da API, antes de começar a programar.
+Esse é o princípio do Design First de API. Antes de desenvolver códigos para o backend, criar a especificação do contrato de API.</p><p><strong>É muito mais fácil ajustar a documentação do que um código!</strong></p><h1>Identifique os resources</h1><p>O conceito fundamental em qualquer API RESTful é o recurso.
+Um recurso é um objeto com um tipo, dados associados, relacionamentos com outros recursos e um conjunto de métodos que operam nele.
+É semelhante a uma instância de objeto em uma linguagem de programação orientada a objetos, com a importante diferença de que apenas
+alguns métodos padrão são definidos para o recurso (correspondendo aos métodos padrão HTTP GET, POST, PUT, DELETE, …),
+enquanto uma instância de objeto geralmente tem outros métodos.</p><p>Os resources podem ser agrupados em collections. Cada collection é homogênea para que contenha apenas um tipo de resource.
+Os resources também podem existir fora de qualquer collection. Nesse caso, nos referimos a esses recursos como singleton resource.
+As collections também são resources.</p><p>As coleções podem existir globalmente, no nível superior de uma API, mas também podem estar contidas em um único recurso.
+Neste caso, nos referimos a essas collections como subcoleções. As subcollections geralmente são usadas para expressar algum
+tipo de relacionamento “contido em”.</p><p>O diagrama abaixo ilustra os principais conceitos em uma API RESTful.</p><imagem></imagem><h1>Design First</h1><p>Em Design-first, a descrição da API é escrita primeiro e, em seguida, o código. As primeiras vantagens óbvias são que o código
+já tem um esqueleto e que algumas ferramentas podem fornecer código clientes automaticamente.</p><p>Que pra mim faz todo o sentido, ir validando a API em etapas e construindo junto a solução junto com o cliente ou personas externas.
+Isso faz com que se crie o contrato, documentação, mock, validação antes de começar a escrever o código da API.</p><p>Aqui na <a href="https://neoway.com.br" target="_blank" rel="noopener noreferrer">Neoway</a>, utilizamos o OpenAPI Specification para descrever o comportamento da API.
+Essa especificação é um padrão disseminado no mercado, usado por muitos serviços e softwares, podendo facilmente ser
+importado e ter a documentação suficiente para conhecer o contrato de API e iniciar a integração.</p><h1>OpenAPI Specification</h1><p>A OpenAPI Specification (OAS) define uma interface padrão independente de linguagem para APIs HTTP que permite que humanos
+e computadores descubram e compreendam os recursos do serviço sem acesso ao código-fonte, documentação ou por meio de inspeçãode tráfego de rede.
+Quando definido corretamente, um consumidor pode entender e interagir com o serviço remoto com uma quantidade mínima de lógica de implementação.
+Uma definição OpenAPI pode ser usada por ferramentas de geração de documentação para exibir a API, ferramentas de geração de código para gerar
+servidores e clientes em várias linguagens de programação, ferramentas de teste e muitos outros casos de uso.</p><h1>Endpoints e Verbos</h1><p>Os endpoints e os verbos são os endereços para acessar alguma funcionalidade da API, são as formas de solicitar alguma coisa,
+algo como: "Me dá os dados da minha conta ai”, resultaria em um GET em <code>/accounts/me</code>.
+O conjunto de endpoints, formam o produto de API, como nesse exemplo, um micro serviço de pedidos de compras:</p><h1>Schemas</h1><p>Os schemas representam os objetos de domínio. O objeto Schema permite a definição de tipos de dados de entrada e saída.
+Esses tipos podem ser objetos, mas também primitivos e arrays.</p><h1>Especificação perto do código</h1><p>As especificações do OpenAPI ficam em arquivos yaml ou json, podendo ser lidos com facilidade por uma pessoa com perfil técnico.</p><p>O legal de ter a documentação via código, é que podemos fazer commit desses arquivos em um repositório e ter controle de versão sobre eles.
+Eaí fechou! Colocamos as pipelines de CI/CD para rodar🤘 </p><p>As descrições da OpenAPI não são apenas um artefato de documentação: são arquivos de origem de primeira classe que podem conduzir um grande
+número de processos automatizados, incluindo geração de boilerplate, teste de unidade e renderização da documentação.</p><p>Como tal, a descrição do OpenAPI deve ser mantida no seu repositório, de fato, deve estar entre os primeiros arquivos a serem confirmados.
+A partir daí, eles também devem participar dos processos de Integração Contínua.</p><p>Se quiser saber mais sobre configurar a pipeline leia esse artigo: Como validar seu Guideline de API na pipeline do CI</p><h1>Referências</h1><p><a href="https://oai.github.io/Documentation/best-practices.html" target="_blank" rel="noopener noreferrer">https://oai.github.io/Documentation/best-practices.html</a>
+<a href="https://developers.redhat.com/blog/2019/02/25/full-api-lifecycle-management-a-primer" target="_blank" rel="noopener noreferrer">https://developers.redhat.com/blog/2019/02/25/full-api-lifecycle-management-a-primer</a>
+<a href="https://rapidapi.com/blog/api-lifecycle-management" target="_blank" rel="noopener noreferrer">https://rapidapi.com/blog/api-lifecycle-management</a>
+<a href="https://restful-api-design.readthedocs.io/en/latest/resources.html" target="_blank" rel="noopener noreferrer">https://restful-api-design.readthedocs.io/en/latest/resources.html</a></p>]]></content>
+        <author>
+            <name>Rafael Mateus</name>
+            <email>rafaelbmateus.dev@gmail.com</email>
+            <uri>https://github.com/rafaelbmateus</uri>
+        </author>
+        <category label="rafaelbmateus" term="rafaelbmateus"/>
+        <category label="blog" term="blog"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Criação do Blog]]></title>
+        <id>welcome</id>
+        <link href="https://blog.rafaelbmateus.com.br/welcome"/>
+        <updated>2022-08-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Criando um blog para compartilhar conteúdos de desenvolvimento de software.]]></summary>
+        <content type="html"><![CDATA[<p>Criando um blog para compartilhar conteúdos de desenvolvimento de software.</p><blockquote><p>Pensei, pensei, enrolei, testei, desisti e acabei criando um blog...</p></blockquote><p>A ideia é compartilhar conteúdos de desenvolvimento de software
+e contextos que estou atuando com outros desenvolvedores.
+Já sofri muito para entender coisas tolas no mundo da programação
+e gostaria que outras pessoas não tivesse a mesma esperiência.</p><p>Ao contrário do que a rapaziada tech fala:
+"cara, vou largar tudo e ir vender picolé na praia...",
+gosto muito dessa área e acabo criando muitos projetos ou estudando
+sobre conteúdos que gostaria de compartilhar.</p><h1>Por que criar um blog? 🤔</h1><p>A ideia inicial era só publicar no <a href="https://linkedin.com.br/in/rafaelbmateus" target="_blank" rel="noopener noreferrer">linkedin</a>
+mas mesmo assim, gostaria de arquivas os materiais em algum lugar para reutilizar.</p><p>Ai criei alguns rascunhos e salvei no Google Docs. No início, tudo certo.</p><p>Mas ai pensei...
+Ué, vai ficar esses arquivos aqui tudo guardado no drive
+sendo que eu posso que eu posso compartilhar de uma maneira organizada.</p><p>Então, veio a ideia de criar um blog usando o
+<a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer">docusaurus</a> 💡</p><h1>Por que o docusaurus?</h1><p>A um ano atrás acabei conhecendo o <a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer">docusaurus</a>
+e achei muito massa.
+Fiquei surpreso com a simplicidade e funcionalidades de documentação e blog
+que vem padrão, sem precisar codificar muito.</p><p>A que mais destacou para mim foi a
+<a href="https://docusaurus.io/docs/versioning" target="_blank" rel="noopener noreferrer">documentação com versionamento</a>.</p><p>Por exemplo, se for criar uma documentação para uma sdk
+e essa sdk evoluir e subir de versão, você consegue navegar pelas versões disponíveis.</p><p>Outra coisa legal, mas que não é particularmente do docusaurus
+é escrever as páginas usando <a href="https://www.markdownguide.org" target="_blank" rel="noopener noreferrer">Markdown</a>.
+Fica simples, não precisa programar nada, deixando o foco para o conteúdo.</p><p>Acabei gostando tanto do projeto que trabalhei na tradução para pt-br</p><p><img loading="lazy" alt="Post linkedin" src="/assets/images/docusaurus-linkedin-post-354cfa4909b4d74ad870d33771ebc337.png" width="802" height="806" class="img_ev3q"></p><p><a href="https://www.linkedin.com/posts/sebastienlorber_reactjs-javascript-documentation-activity-6827988344983564288-bTf3" target="_blank" rel="noopener noreferrer">Link da publicação</a></p><h1>Crie o seu!</h1><p>A documentação do <a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer">docusaurus</a> é muito boa e fácil de seguir.
+Já vem muita configuração padrão.</p><p>Para criar o seu blog, site ou expor documentação
+<a href="https://docusaurus.io/docs#fast-track" target="_blank" rel="noopener noreferrer">siga o tutorial rápido</a>.</p><p>Resumindo seria apenas criar o projeto:</p><div class="language-console codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-console codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npx create-docusaurus@latest my-website classic</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copiar código para a área de transferência" title="Copiar" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>E iniciar o site:</p><div class="language-console codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-console codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cd my-website</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npx docusaurus start</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copiar código para a área de transferência" title="Copiar" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>Aí só abrir o navegador <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">http://localhost:3000</a></p><p>Depois você pode fazer o deploy no github pages, sem pagar nada.</p><h1>Exemplos</h1><p>Quando conheci o <a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer">docusaurus</a>,
+tinha criado esse <a href="https://github.com/rafaelbmateus/my-website" target="_blank" rel="noopener noreferrer">repositório</a>
+bem simples, só seguindo o tutorial inicial de 5 minutos.</p><p>Usei também para uma comunidade que criei com o site e blog
+<a href="https://github.com/whitestonedev/website" target="_blank" rel="noopener noreferrer">whiteStone_dev</a></p><p>Se ficar com dúvida, pode entrar em contato comigo pelo LinkedIn
+que tento ajudar também 🤙</p>]]></content>
+        <author>
+            <name>Rafael Mateus</name>
+            <email>rafaelbmateus.dev@gmail.com</email>
+            <uri>https://github.com/rafaelbmateus</uri>
+        </author>
+        <category label="blog" term="blog"/>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+</feed>

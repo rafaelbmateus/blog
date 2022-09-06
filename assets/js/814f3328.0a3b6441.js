@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Desenhe primeiro sua interface de API, antes de come\xe7ar a desenvolver","permalink":"/api-design-first"},{"title":"Cria\xe7\xe3o do Blog","permalink":"/welcome"}]}')}}]);
