@@ -13,6 +13,8 @@ Esse é o princípio do Design First de API. Antes de desenvolver códigos para 
 
 **É muito mais fácil ajustar a documentação do que um código!**
 
+<!-- truncate -->
+
 # Identifique os resources
 
 O conceito fundamental em qualquer API RESTful é o recurso.
