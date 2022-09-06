@@ -42,7 +42,7 @@ const config = {
     ({
       navbar: {
         items: [
-          {to: 'https://www.rafaelbmateus.com.br', label: 'Rafael Mateus', position: 'left'},
+          {to: 'https://rafaelbmateus.com.br', label: 'Rafael Mateus', position: 'left'},
           {to: '/', label: 'Blog', position: 'left'},
           {to: '/tags', label: 'Tags', position: 'left'},
           {
