@@ -1,7 +1,7 @@
 ---
 slug: edge-proxy-service-proxy-api-gateway-service-mesh
-title: Desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh
-description: Artigo desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh
+title: "Desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh"
+description: "Artigo desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh"
 authors: rafaelbmateus
 tags: [Edge Proxy, Service Proxy, API Gateway, Service Mesh]
 ---
