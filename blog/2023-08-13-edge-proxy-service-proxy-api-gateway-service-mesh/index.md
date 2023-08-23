@@ -1,56 +1,60 @@
 ---
 slug: edge-proxy-service-proxy-api-gateway-service-mesh
-title: "Desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh"
+title: "Desvendando o Ecossistema de APIs: Edge Proxy, Service Proxy, API Gateway e Service Mesh"
 description: "Artigo desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh"
 authors: rafaelbmateus
 tags: [Edge Proxy, Service Proxy, API Gateway, Service Mesh]
 ---
 
-# Desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh
+# Desvendando o Ecossistema de APIs: Edge Proxy, Service Proxy, API Gateway e Service Mesh
 
-A evolução da arquitetura de microsserviços e a crescente importância das APIs na economia digital trouxeram à tona desafios complexos em relação a segurança, gerenciamento e eficiência da comunicação. Neste artigo, exploraremos quatro componentes cruciais desse ecossistema: Edge Proxy, Service Proxy, API Gateway e Service Mesh. Vamos mergulhar em cada um deles, examinando exemplos do mundo real no contexto de APIs, e, ao final, faremos uma análise comparativa para ajudar a determinar qual solução é a mais adequada para diferentes cenários.
+A evolução da arquitetura de microsserviços e a crescente importância das APIs trouxeram alguns componentes
+com o objetivo de solucionar ou simplesmente facilitar esses processos.
+Neste artigo, exploraremos quatro componentes desse ecossistema:
+Edge Proxy, Service Proxy, API Gateway e Service Mesh.
+E ao final, uma análise comparativa das solução aplicadas em diferentes cenários.
 
 <!-- truncate -->
 
 ## Edge Proxy: Segurança e Roteamento na Entrada da Rede de APIs
 
-Ao expor APIs externamente, a proteção contra ameaças é imperativa. Um Edge Proxy, como o NGINX ou o [Envoy](https://envoyproxy.io)(CNCF Graduated),
-age como o guardião da entrada da rede, proporcionando autenticação, autorização e criptografia.
-Além disso, ele realiza o roteamento inteligente do tráfego, direcionando as solicitações para os serviços apropriados.
+O primeiro a explorar sua função é o Edge Proxy.
+Esse componente é utilizado como front-layer, sendo utilizado como borda da infraestrutura,
+com o objetivo de gerenciar o tráfego na borda da rede, atuando como um intermediário entre o tráfego externo e os serviços internos.
+O legal é de assegurar que todas as requisições sigam padrões, garantindo segurança, autenticação e autorização,
+controle de headers upstream, criptografia, etc.
 
-Envoy é um projeto que pode ser usado como Edge Proxy para gerenciar o tráfego na borda da rede,
-atuando como um intermediário entre o tráfego externo e os serviços internos.
+Uma opção legal para Edge Proxy é o [Envoy](https://envoyproxy.io).
+O Envoy é [CNCF](https://cncf.io) Graduated e utilizado em outros componentes.
+Atualmente com 22.6k de estrelas no [GitHub](https://github.com/envoyproxy/envoy).
+
 O Envoy é uma ferramenta extremamente flexível que pode desempenhar vários papéis,
 incluindo o de Edge Proxy, você pode configurá-lo para tratar questões como:
 
-- TLS Termination: O Envoy pode lidar com a terminação TLS (SSL offloading), o que significa que ele pode gerenciar a criptografia e a descriptografia do tráfego TLS, deixando os serviços internos focados em processar os dados.
+- TLS Termination: O Envoy pode gerenciar a criptografia e a descriptografia do tráfego TLS, deixando os serviços internos focados em processar os dados.
 
-- Roteamento Avançado: O Envoy pode rotear o tráfego com base em várias condições, como cabeçalhos HTTP, métodos, URLs etc., permitindo que você direcione as solicitações para os serviços corretos.
+- Roteamento: Pode rotear o tráfego com base em várias condições, como cabeçalhos HTTP, métodos, URLs, etc., direcionando as requisições para os serviços corretos.
 
-- Autenticação e Autorização: O Envoy pode verificar certificados TLS, fazer verificação de token JWT, integrar-se com sistemas de autenticação externos e tomar decisões de autorização com base em políticas definidas.
+- Autenticação e Autorização: Pode fazer verificação de token JWT, integrar-se com sistemas de autenticação externos e tomar decisões de autorização com base em políticas de acesso.
 
-- Balanceamento de Carga: O Envoy pode distribuir o tráfego de entrada de maneira equilibrada entre os serviços, garantindo que eles não sejam sobrecarregados.
+- Balanceamento de Carga: Pode distribuir o tráfego de entrada de maneira equilibrada entre os serviços, garantindo que eles não sejam sobrecarregados.
 
-- Circuit Breaking e Recuperação de Falhas: O Envoy pode monitorar a saúde dos serviços e implementar circuit breaking para evitar que serviços com problemas afetem outros. Além disso, ele oferece mecanismos de recuperação de falhas para minimizar o impacto de falhas em serviços.
+- Circuit Breaking e Recuperação de Falhas: Pode monitorar a saúde dos serviços e implementar circuit breaking para evitar que serviços com problemas afetem outros. Além disso, ele oferece mecanismos de recuperação de falhas para minimizar o impacto de falhas em serviços.
 
-- Observabilidade: O Envoy fornece métricas detalhadas, logs e informações de rastreamento que podem ser usadas para monitorar e solucionar problemas de comunicação entre serviços.
+- Observabilidade: Fornece métricas, logs e informações de rastreamento que podem ser usadas para monitorar e solucionar problemas de comunicação entre serviços.
 
 
 ## Service Proxy: Simplificando a Comunicação Interna entre APIs
 
-A comunicação interna entre serviços é um dos pilares das arquiteturas de microsserviços. Um Service Proxy, como o Envoy,
-assume a responsabilidade de gerenciar essa comunicação.
-Ele oferece recursos como roteamento baseado em regras, balanceamento de carga e recuperação de falhas para tornar
-a comunicação entre microsserviços mais eficiente e resiliente.
-
-Exemplo: Um Service Proxy gerencia a comunicação entre os serviços de autenticação e catálogo de produtos, roteando as solicitações de um serviço para outro de acordo com as políticas definidas.
-
-O Envoy também pode ser utilizado como Service Proxy, utilizando suas funcionalidade para um serviço específico.
+O segundo componente a ser analisado é o Service Proxy.
+Seu objetivo é fazer o papel de proxy apenas do serviço especifico, ao contrário do Edge Proxy que funciona de maneira global.
+Podendo ser aplicado com sidecar quando o deploy estiver em conjunto com o microserviço, ou desacoplado, em uma camada superior.
+Nesse caso, o [Envoy](https://envoyproxy.io) também pode ser configurado como Service Proxy, mantendo todas aquelas funcionalidades porém aplicadas no domínio
+do microserviço específico.
 
 ## API Gateway: Simplificando a Exposição e Gerenciamento de APIs
 
-Um API Gateway é um componente na arquitetura que atua como um ponto de entrada único para várias APIs,
-simplificando a exposição, gerenciamento e consumo de APIs.
+O API Gateway é um componente na arquitetura que atua como um ponto de entrada único para várias APIs, simplificando a exposição, gerenciamento e consumo de APIs.
 Ele oferece uma camada intermediária entre os clientes e os microsserviços subjacentes, permitindo controlar e otimizar a comunicação e a interação.
 
 Funções de um API Gateway:
@@ -72,7 +76,7 @@ Funções de um API Gateway:
 ## Service Mesh: Gerenciando Comunicação e Operações em Ambientes Complexos
 
 À medida que os sistemas de microsserviços se expandem, o gerenciamento da comunicação entre eles se torna mais desafiador.
-Um Service Mesh, como o [Istio](https://istio.io)(CNCF Graduated), entra em cena para fornecer recursos avançados,
+Um Service Mesh, como o [Istio](https://istio.io) (CNCF Graduated), entra em cena para fornecer recursos avançados,
 incluindo descoberta automática de serviços, roteamento baseado em políticas, recuperação de falhas e segurança de ponta a ponta.
 
 Exemplo: Um Service Mesh gerencia a comunicação entre diversos microsserviços que compõem uma aplicação de entrega sob demanda,
@@ -95,4 +99,3 @@ e a inovação contínua no cenário de APIs em constante evolução.
 - https://envoyproxy.io/docs
 - https://landscape.cncf.io
 - https://github.com/istio/istio
-- 
