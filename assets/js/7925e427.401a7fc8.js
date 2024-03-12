@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[2118],{3462:a=>{a.exports=JSON.parse('{"label":"API Gateway","permalink":"/tags/api-gateway","allTagsPath":"/tags","count":1}')}}]);

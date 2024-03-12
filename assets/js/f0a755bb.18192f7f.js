@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[8331],{1019:a=>{a.exports=JSON.parse('{"label":"Cifra Club","permalink":"/tags/cifra-club","allTagsPath":"/tags","count":1}')}}]);

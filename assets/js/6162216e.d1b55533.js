@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[339],{6256:e=>{e.exports=JSON.parse('{"label":"Edge Proxy","permalink":"/tags/edge-proxy","allTagsPath":"/tags","count":1}')}}]);

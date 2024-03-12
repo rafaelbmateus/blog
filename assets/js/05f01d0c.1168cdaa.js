@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[252],{8066:e=>{e.exports=JSON.parse('{"label":"Deezer","permalink":"/tags/deezer","allTagsPath":"/tags","count":1}')}}]);

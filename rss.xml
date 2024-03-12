@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Rafael Mateus Blog</title>
+        <link>https://blog.rafaelbmateus.com.br/</link>
+        <description>Rafael Mateus Blog</description>
+        <lastBuildDate>Wed, 13 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>pt-BR</language>
+        <item>
+            <title><![CDATA[Crie sua página de perfil GitHub sem esforço]]></title>
+            <link>https://blog.rafaelbmateus.com.br/launch-me</link>
+            <guid>launch-me</guid>
+            <pubDate>Wed, 13 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Você já pensou em ter uma página de perfil para mostrar todos os seus projetos do GitHub sem precisar se preocupar com a configuração complicada? Bem, agora é possível com este projeto incrível!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="crie-sua-página-de-perfil-github-sem-esforço">Crie sua página de perfil GitHub sem esforço!<a class="hash-link" href="#crie-sua-página-de-perfil-github-sem-esforço" title="Link direto para o título">​</a></h2><p>Você já pensou em ter uma página de perfil para mostrar todos os seus projetos do GitHub sem precisar
+se preocupar com a configuração complicada? Bem, agora é possível com este projeto incrível!</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="o-que-é-isso">O que é isso?<a class="hash-link" href="#o-que-é-isso" title="Link direto para o título">​</a></h2><p>Este projeto utiliza a API pública do GitHub para coletar informações sobre seus repositórios e
+cria automaticamente uma página de perfil para você. E a melhor parte? Não é necessário alterar nada no código!</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="como-funciona">Como funciona?<a class="hash-link" href="#como-funciona" title="Link direto para o título">​</a></h2><p>A pipeline do GitHub Actions é acionada para gerar uma página estática usando Python com todas as suas informações.
+Você pode compartilhar o link da sua página com suas próprias meta tags SEO para que seja facilmente encontrado.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="como-usar">Como usar?<a class="hash-link" href="#como-usar" title="Link direto para o título">​</a></h2><p>Para criar sua própria página de perfil, é simples:</p><b>Faça um fork do repositório</b>.<p>Pronto! Sua página estará pronta em questão de segundos, sem que você precise alterar uma única linha de código!</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="destaque-seus-projetos">Destaque seus projetos<a class="hash-link" href="#destaque-seus-projetos" title="Link direto para o título">​</a></h2><p>Para mostrar seus repositórios na página de perfil, basta adicionar a tag "me" em cada repositório
+e eles serão exibidos automaticamente na sua página.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="experimente-agora-mesmo">Experimente agora mesmo!<a class="hash-link" href="#experimente-agora-mesmo" title="Link direto para o título">​</a></h3><p>Repositório: <a href="https://github.com/rafaelbmateus/me" target="_blank" rel="noopener noreferrer">https://github.com/rafaelbmateus/me</a>
+Demo: <a href="https://rafaelbmateus.github.io/me" target="_blank" rel="noopener noreferrer">https://rafaelbmateus.github.io/me</a></p><p>Não perca mais tempo configurando páginas de perfil manualmente.
+Experimente este projeto agora e destaque seus projetos GitHub de forma fácil e rápida!</p>]]></content:encoded>
+            <author>rafaelbmateus.dev@gmail.com (Rafael Mateus)</author>
+            <category>Portifólio</category>
+            <category>GitHub</category>
+            <category>GitHub Pages</category>
+            <category>Open Source</category>
+            <category>Free</category>
+        </item>
+        <item>
+            <title><![CDATA[Spleeter API: Separando Vocais e Acompanhamento em Músicas por meio de API]]></title>
+            <link>https://blog.rafaelbmateus.com.br/spleeter-api</link>
+            <guid>spleeter-api</guid>
+            <pubDate>Tue, 12 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Descubra como o Spleeter API pode separar vocais e acompanhamento em músicas automaticamente. Conheça o projeto baseado na tecnologia Spleeter da Deezer e aprenda como integrá-lo via API]]></description>
+            <content:encoded><![CDATA[<p>Se você já se perguntou como seria incrível ter o poder de separar os vocais de uma música do acompanhamento
+via API, então você veio ao lugar certo!
+O Spleeter API é uma ferramenta baseada no projeto <a href="https://github.com/deezer/spleeter" target="_blank" rel="noopener noreferrer">Spleeter</a>
+da <a href="https://www.deezer.com" target="_blank" rel="noopener noreferrer">Deezer</a>,
+que permite exatamente isso: a separação de vocais e acompanhamento de músicas de forma automatizada e eficiente.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="o-que-é-o-spleeter">O que é o Spleeter?<a class="hash-link" href="#o-que-é-o-spleeter" title="Link direto para o título">​</a></h2><p>Desenvolvido pela <a href="https://www.deezer.com" target="_blank" rel="noopener noreferrer">Deezer</a>, o <a href="https://github.com/deezer/spleeter" target="_blank" rel="noopener noreferrer">Spleeter</a>
+é uma biblioteca de código aberto para separação de fontes musicais.
+Ele utiliza modelos de aprendizado profundo para extrair diferentes elementos de uma música,
+como vocais, bateria, baixo e outros, oferecendo uma separação limpa e de alta qualidade.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="por-que-o-spleeter-api">Por que o Spleeter API?<a class="hash-link" href="#por-que-o-spleeter-api" title="Link direto para o título">​</a></h2><p>O <a href="https://github.com/code4music/spleeter-api" target="_blank" rel="noopener noreferrer">Spleeter API</a> é uma interface de programação de aplicativos (API)
+construída em cima do <a href="https://github.com/deezer/spleeter" target="_blank" rel="noopener noreferrer">Spleeter</a>,
+permitindo que desenvolvedores integrem facilmente a funcionalidade de separação de áudio em seus próprios projetos.
+Se você é um desenvolvedor de aplicativos de música, criador de conteúdo musical ou apenas um entusiasta da tecnologia, o
+<a href="https://github.com/code4music/spleeter-api" target="_blank" rel="noopener noreferrer">Spleeter API</a>
+oferece uma maneira simples e poderosa de explorar e utilizar essa tecnologia inovadora via API.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="como-usar-o-spleeter-api">Como usar o Spleeter API?<a class="hash-link" href="#como-usar-o-spleeter-api" title="Link direto para o título">​</a></h2><p>Usar o <a href="https://github.com/code4music/spleeter-api" target="_blank" rel="noopener noreferrer">Spleeter API</a> é fácil! Basta fazer uma solicitação para o endpoint apropriado, e você receberá os resultados da separação de áudio no formato desejado. Com apenas algumas linhas de código, você pode separar vocais e acompanhamento de qualquer música em sua própria aplicação.</p><p>Se você está se perguntando como começar, não se preocupe!
+Eu criei um repositório no <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a> chamado Spleeter API, onde você pode encontrar documentação detalhada,
+exemplos de código e instruções para começar a usar o <a href="https://github.com/code4music/spleeter-api" target="_blank" rel="noopener noreferrer">Spleeter API</a>.</p><p>Além disso, se você também é um músico geek interessado em integrar funcionalidades de cifras em seus projetos,
+não deixe de conferir meu outro post sobre o <a href="https://blog.rafaelbmateus.com.br/cifraclub-api" target="_blank" rel="noopener noreferrer">Cifra Club API</a>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="contribuindo-para-o-spleeter-api">Contribuindo para o Spleeter API<a class="hash-link" href="#contribuindo-para-o-spleeter-api" title="Link direto para o título">​</a></h2><p>O <a href="https://github.com/code4music/spleeter-api" target="_blank" rel="noopener noreferrer">Spleeter API</a> é um projeto de código aberto,
+e estou sempre aberto a contribuições da comunidade.
+Se você tem ideias para melhorias, correções de bugs ou apenas quer se envolver no desenvolvimento,
+fique à vontade para abrir uma issue ou enviar um pull request para o repositório do projeto no GitHub.</p><p>Então, o que você está esperando?
+Visite o repositório do <a href="https://github.com/code4music/spleeter-api" target="_blank" rel="noopener noreferrer">Spleeter API</a>
+agora mesmo e faça os testes você mesmo!</p><p>Até logo!</p>]]></content:encoded>
+            <author>rafaelbmateus.dev@gmail.com (Rafael Mateus)</author>
+            <category>Deezer</category>
+            <category>Spleeter</category>
+            <category>API</category>
+            <category>GitHub</category>
+            <category>Open Source</category>
+        </item>
+        <item>
+            <title><![CDATA[Facilitando a vida dos músicos geeks: Projeto Cifra Club API]]></title>
+            <link>https://blog.rafaelbmateus.com.br/cifraclub-api</link>
+            <guid>cifraclub-api</guid>
+            <pubDate>Mon, 11 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Se você é um músico geek como eu, provavelmente já pensou em como seria incrível se o Cifra Club tivesse uma API para acessar suas cifras, não é mesmo? Pois bem, recentemente tive essa mesma ideia e decidi colocá-la em prática.]]></description>
+            <content:encoded><![CDATA[<p>E aí, pessoal! Se você é um músico geek como eu, provavelmente já pensou em como seria incrível
+se o Cifra Club tivesse uma API para acessar suas cifras, não é mesmo?
+Pois bem, recentemente tive essa mesma ideia e decidi colocá-la em prática.</p><p>O objetivo é simples: facilitar a integração das cifras do Cifra Club com outros sistemas.
+Imagina só poder automatizar processos como montar uma "pastinha" com todas as cifras que
+você precisa sem ter que abrir o navegador e copiar uma por uma?
+Parece um sonho, mas é exatamente o que estou trabalhando para tornar realidade.</p><p>O projeto que iniciei neste fim de semana consiste em disponibilizar as cifras
+do Cifra Club em formato JSON através de uma interface de API.
+Isso significa que será possível acessar as informações das músicas de forma estruturada e automatizada.</p><p>Para alcançar esse objetivo, estou utilizando Python como linguagem de programação,
+com Flask como framework na camada HTTP e Selenium para interagir com a página HTML
+do Cifra Club e extrair as informações necessárias, como nome da música, nome do artista,
+cifra, link para YouTube e link do Cifra Club.</p><p>Já consegui avançar bastante no projeto, mas é claro que sempre há espaço para melhorias.
+Alguns dos próximos passos que estou planejando incluem:</p><ul><li>Implementar a funcionalidade de mudar o tom da música, o que seria especialmente útil para músicos que desejam adaptar as cifras para suas vozes ou instrumentos.</li><li>Dar aos usuários a opção de exibir ou não a tablatura na cifra, para atender às preferências individuais de cada um.</li><li>Otimizar a busca do Selenium na página HTML do Cifra Club para tornar o processo ainda mais rápido e eficiente.</li></ul><p>Se você também é um entusiasta da música e da tecnologia e quer saber mais sobre o projeto ou contribuir
+de alguma forma, sinta-se à vontade para
+<a href="https://github.com/code4music/cifraclub-api" target="_blank" rel="noopener noreferrer">dar uma estrela no projeto</a>
+no GitHub ou
+<a href="https://github.com/code4music/cifraclub-api/pulls" target="_blank" rel="noopener noreferrer">abrir um pull request</a>
+com suas sugestões e contribuições.</p><p>Até a próxima!</p>]]></content:encoded>
+            <author>rafaelbmateus.dev@gmail.com (Rafael Mateus)</author>
+            <category>Cifra Club</category>
+            <category>API</category>
+            <category>GitHub</category>
+            <category>Open Source</category>
+        </item>
+        <item>
+            <title><![CDATA[Desvendando o Ecossistema de APIs: Edge Proxy, Service Proxy, API Gateway e Service Mesh]]></title>
+            <link>https://blog.rafaelbmateus.com.br/edge-proxy-service-proxy-api-gateway-service-mesh</link>
+            <guid>edge-proxy-service-proxy-api-gateway-service-mesh</guid>
+            <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Artigo desvendando o Ecossistema de APIs: Comparando Edge Proxy, Service Proxy, API Gateway e Service Mesh]]></description>
+            <content:encoded><![CDATA[<p>A evolução da arquitetura de microsserviços e a crescente importância das APIs trouxeram alguns componentes
+com o objetivo de solucionar ou simplesmente facilitar esses processos.
+Neste artigo, exploraremos quatro componentes desse ecossistema:
+Edge Proxy, Service Proxy, API Gateway e Service Mesh.
+E ao final, uma análise comparativa das solução aplicadas em diferentes cenários.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="edge-proxy-segurança-e-roteamento-na-entrada-da-rede-de-apis">Edge Proxy: Segurança e Roteamento na Entrada da Rede de APIs<a class="hash-link" href="#edge-proxy-segurança-e-roteamento-na-entrada-da-rede-de-apis" title="Link direto para o título">​</a></h2><p>O primeiro a explorar sua função é o Edge Proxy.
+Esse componente é utilizado como front-layer, sendo utilizado como borda da infraestrutura,
+com o objetivo de gerenciar o tráfego na borda da rede, atuando como um intermediário entre o tráfego externo e os serviços internos.
+O legal é de assegurar que todas as requisições sigam padrões, garantindo segurança, autenticação e autorização,
+controle de headers upstream, criptografia, etc.</p><p>Uma opção legal para Edge Proxy é o <a href="https://envoyproxy.io" target="_blank" rel="noopener noreferrer">Envoy</a>.
+O Envoy é <a href="https://cncf.io" target="_blank" rel="noopener noreferrer">CNCF</a> Graduated e utilizado em outros componentes.
+Atualmente com 22.6k de estrelas no <a href="https://github.com/envoyproxy/envoy" target="_blank" rel="noopener noreferrer">GitHub</a>.</p><p>O Envoy é uma ferramenta extremamente flexível que pode desempenhar vários papéis,
+incluindo o de Edge Proxy, você pode configurá-lo para tratar questões como:</p><ul><li><p>TLS Termination: O Envoy pode gerenciar a criptografia e a descriptografia do tráfego TLS, deixando os serviços internos focados em processar os dados.</p></li><li><p>Roteamento: Pode rotear o tráfego com base em várias condições, como cabeçalhos HTTP, métodos, URLs, etc., direcionando as requisições para os serviços corretos.</p></li><li><p>Autenticação e Autorização: Pode fazer verificação de token JWT, integrar-se com sistemas de autenticação externos e tomar decisões de autorização com base em políticas de acesso.</p></li><li><p>Balanceamento de Carga: Pode distribuir o tráfego de entrada de maneira equilibrada entre os serviços, garantindo que eles não sejam sobrecarregados.</p></li><li><p>Circuit Breaking e Recuperação de Falhas: Pode monitorar a saúde dos serviços e implementar circuit breaking para evitar que serviços com problemas afetem outros. Além disso, ele oferece mecanismos de recuperação de falhas para minimizar o impacto de falhas em serviços.</p></li><li><p>Observabilidade: Fornece métricas, logs e informações de rastreamento que podem ser usadas para monitorar e solucionar problemas de comunicação entre serviços.</p></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="service-proxy-simplificando-a-comunicação-interna-entre-apis">Service Proxy: Simplificando a Comunicação Interna entre APIs<a class="hash-link" href="#service-proxy-simplificando-a-comunicação-interna-entre-apis" title="Link direto para o título">​</a></h2><p>O segundo componente a ser analisado é o Service Proxy.
+Seu objetivo é fazer o papel de proxy apenas do serviço especifico, ao contrário do Edge Proxy que funciona de maneira global.
+Podendo ser aplicado com sidecar quando o deploy estiver em conjunto com o microserviço, ou desacoplado, em uma camada superior.
+Nesse caso, o <a href="https://envoyproxy.io" target="_blank" rel="noopener noreferrer">Envoy</a> também pode ser configurado como Service Proxy, mantendo todas aquelas funcionalidades porém aplicadas no domínio
+do microserviço específico.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="api-gateway-simplificando-a-exposição-e-gerenciamento-de-apis">API Gateway: Simplificando a Exposição e Gerenciamento de APIs<a class="hash-link" href="#api-gateway-simplificando-a-exposição-e-gerenciamento-de-apis" title="Link direto para o título">​</a></h2><p>O API Gateway é um componente na arquitetura que atua como um ponto de entrada único para várias APIs, simplificando a exposição, gerenciamento e consumo de APIs.
+Ele oferece uma camada intermediária entre os clientes e os microsserviços subjacentes, permitindo controlar e otimizar a comunicação e a interação.</p><p>Funções de um API Gateway:</p><ul><li><p>Roteamento Avançado: Permite rotear solicitações com base em condições como URLs, métodos HTTP, cabeçalhos ou parâmetros.</p></li><li><p>Autenticação e Autorização: Ele oferece recursos de autenticação e autorização, permitindo que apenas usuários autorizados acessem determinadas APIs. Isso inclui autenticação baseada em tokens, como JWT (JSON Web Tokens), e integração com sistemas de gerenciamento de identidade.</p></li><li><p>Transformação de Dados: O API Gateway pode transformar os dados de entrada e saída para corresponder aos formatos esperados pelos clientes ou pelos microsserviços, facilitando a interoperabilidade.</p></li><li><p>Controle de Acesso e Limitação de Taxa: O API Gateway pode definir políticas de controle de acesso, limitando o número de solicitações que um cliente pode fazer em um determinado período de tempo.</p></li><li><p>Monitoramento e Análise: Ele coleta métricas, logs e informações de rastreamento relacionados às solicitações e respostas das APIs, permitindo monitorar o desempenho e identificar problemas.</p></li><li><p>Cache: O API Gateway pode implementar cache para reduzir a carga nos microsserviços e melhorar a latência, armazenando temporariamente respostas frequentemente solicitadas.</p></li><li><p>Versionamento: Ele pode gerenciar versões de APIs, permitindo que os clientes acessem diferentes versões com facilidade.</p></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="service-mesh-gerenciando-comunicação-e-operações-em-ambientes-complexos">Service Mesh: Gerenciando Comunicação e Operações em Ambientes Complexos<a class="hash-link" href="#service-mesh-gerenciando-comunicação-e-operações-em-ambientes-complexos" title="Link direto para o título">​</a></h2><p>À medida que os sistemas de microsserviços se expandem, o gerenciamento da comunicação entre eles se torna mais desafiador.
+Um Service Mesh, como o <a href="https://istio.io" target="_blank" rel="noopener noreferrer">Istio</a> (CNCF Graduated), entra em cena para fornecer recursos avançados,
+incluindo descoberta automática de serviços, roteamento baseado em políticas, recuperação de falhas e segurança de ponta a ponta.</p><p>Exemplo: Um Service Mesh gerencia a comunicação entre diversos microsserviços que compõem uma aplicação de entrega sob demanda,
+otimizando o roteamento com base nas preferências do usuário e garantindo uma experiência contínua.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="comparação-final-escolhendo-a-solução-adequada-para-cada-cenário">Comparação Final: Escolhendo a Solução Adequada para Cada Cenário<a class="hash-link" href="#comparação-final-escolhendo-a-solução-adequada-para-cada-cenário" title="Link direto para o título">​</a></h2><p>A escolha entre Edge Proxy, Service Proxy, API Gateway e Service Mesh depende das necessidades e metas do projeto.
+O Edge Proxy é a primeira linha de defesa para segurança externa, enquanto o Service Proxy simplifica a comunicação interna.
+O API Gateway é a escolha para gerenciar exposição e acesso a APIs, enquanto o Service Mesh lida com complexidade operacional
+e comunicação em ambientes de microsserviços.</p><p>Neste mundo orientado por APIs e microsserviços, as soluções citadas são fundamentais para alcançar uma comunicação eficiente, segura e escalável.
+Compreender as capacidades únicas de cada uma ajuda a escolher a solução mais adequada para atender aos objetivos do projeto.
+A decisão correta não apenas impulsiona a eficiência operacional, mas também estabelece uma base sólida para o crescimento futuro
+e a inovação contínua no cenário de APIs em constante evolução.</p><h1>Referências</h1><ul><li><a href="https://envoyproxy.io/docs" target="_blank" rel="noopener noreferrer">https://envoyproxy.io/docs</a></li><li><a href="https://landscape.cncf.io" target="_blank" rel="noopener noreferrer">https://landscape.cncf.io</a></li><li><a href="https://github.com/istio/istio" target="_blank" rel="noopener noreferrer">https://github.com/istio/istio</a></li></ul>]]></content:encoded>
+            <author>rafaelbmateus.dev@gmail.com (Rafael Mateus)</author>
+            <category>Edge Proxy</category>
+            <category>Service Proxy</category>
+            <category>API Gateway</category>
+            <category>Service Mesh</category>
+        </item>
+        <item>
+            <title><![CDATA[Desenhe primeiro sua interface de API, antes de começar a desenvolver]]></title>
+            <link>https://blog.rafaelbmateus.com.br/api-design-first</link>
+            <guid>api-design-first</guid>
+            <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Projetar interfaces de API na maioria das vezes é a melhor forma para validar o contrato e funcionamento da API.
+Esse é o princípio do Design First de API.
+]]></description>
+            <content:encoded><![CDATA[<p>Projetar interfaces de API na grande maioria das vezes é a melhor forma para validar o contrato e funcionamento da API, antes de começar a programar.
+Esse é o princípio do Design First de API. Antes de desenvolver códigos para o backend, criar a especificação do contrato de API.</p><p><strong>É muito mais fácil ajustar a documentação do que um código!</strong></p><h1>Identifique os resources</h1><p>O conceito fundamental em qualquer API RESTful é o recurso.
+Um recurso é um objeto com um tipo, dados associados, relacionamentos com outros recursos e um conjunto de métodos que operam nele.
+É semelhante a uma instância de objeto em uma linguagem de programação orientada a objetos, com a importante diferença de que apenas
+alguns métodos padrão são definidos para o recurso (correspondendo aos métodos padrão HTTP GET, POST, PUT, DELETE, …),
+enquanto uma instância de objeto geralmente tem outros métodos.</p><p>Os resources podem ser agrupados em collections. Cada collection é homogênea para que contenha apenas um tipo de resource.
+Os resources também podem existir fora de qualquer collection. Nesse caso, nos referimos a esses recursos como singleton resource.
+As collections também são resources.</p><p>As coleções podem existir globalmente, no nível superior de uma API, mas também podem estar contidas em um único recurso.
+Neste caso, nos referimos a essas collections como subcoleções. As subcollections geralmente são usadas para expressar algum
+tipo de relacionamento “contido em”.</p><p>O diagrama abaixo ilustra os principais conceitos em uma API RESTful.</p><imagem></imagem><h1>Design First</h1><p>Em Design-first, a descrição da API é escrita primeiro e, em seguida, o código. As primeiras vantagens óbvias são que o código
+já tem um esqueleto e que algumas ferramentas podem fornecer código clientes automaticamente.</p><p>Que pra mim faz todo o sentido, ir validando a API em etapas e construindo junto a solução junto com o cliente ou personas externas.
+Isso faz com que se crie o contrato, documentação, mock, validação antes de começar a escrever o código da API.</p><p>Aqui na <a href="https://neoway.com.br" target="_blank" rel="noopener noreferrer">Neoway</a>, utilizamos o OpenAPI Specification para descrever o comportamento da API.
+Essa especificação é um padrão disseminado no mercado, usado por muitos serviços e softwares, podendo facilmente ser
+importado e ter a documentação suficiente para conhecer o contrato de API e iniciar a integração.</p><h1>OpenAPI Specification</h1><p>A OpenAPI Specification (OAS) define uma interface padrão independente de linguagem para APIs HTTP que permite que humanos
+e computadores descubram e compreendam os recursos do serviço sem acesso ao código-fonte, documentação ou por meio de inspeçãode tráfego de rede.
+Quando definido corretamente, um consumidor pode entender e interagir com o serviço remoto com uma quantidade mínima de lógica de implementação.
+Uma definição OpenAPI pode ser usada por ferramentas de geração de documentação para exibir a API, ferramentas de geração de código para gerar
+servidores e clientes em várias linguagens de programação, ferramentas de teste e muitos outros casos de uso.</p><h1>Endpoints e Verbos</h1><p>Os endpoints e os verbos são os endereços para acessar alguma funcionalidade da API, são as formas de solicitar alguma coisa,
+algo como: "Me dá os dados da minha conta ai”, resultaria em um GET em <code>/accounts/me</code>.
+O conjunto de endpoints, formam o produto de API, como nesse exemplo, um micro serviço de pedidos de compras:</p><h1>Schemas</h1><p>Os schemas representam os objetos de domínio. O objeto Schema permite a definição de tipos de dados de entrada e saída.
+Esses tipos podem ser objetos, mas também primitivos e arrays.</p><h1>Especificação perto do código</h1><p>As especificações do OpenAPI ficam em arquivos yaml ou json, podendo ser lidos com facilidade por uma pessoa com perfil técnico.</p><p>O legal de ter a documentação via código, é que podemos fazer commit desses arquivos em um repositório e ter controle de versão sobre eles.
+Eaí fechou! Colocamos as pipelines de CI/CD para rodar🤘 </p><p>As descrições da OpenAPI não são apenas um artefato de documentação: são arquivos de origem de primeira classe que podem conduzir um grande
+número de processos automatizados, incluindo geração de boilerplate, teste de unidade e renderização da documentação.</p><p>Como tal, a descrição do OpenAPI deve ser mantida no seu repositório, de fato, deve estar entre os primeiros arquivos a serem confirmados.
+A partir daí, eles também devem participar dos processos de Integração Contínua.</p><p>Se quiser saber mais sobre configurar a pipeline leia esse artigo: Como validar seu Guideline de API na pipeline do CI</p><h1>Referências</h1><p><a href="https://oai.github.io/Documentation/best-practices.html" target="_blank" rel="noopener noreferrer">https://oai.github.io/Documentation/best-practices.html</a>
+<a href="https://developers.redhat.com/blog/2019/02/25/full-api-lifecycle-management-a-primer" target="_blank" rel="noopener noreferrer">https://developers.redhat.com/blog/2019/02/25/full-api-lifecycle-management-a-primer</a>
+<a href="https://rapidapi.com/blog/api-lifecycle-management" target="_blank" rel="noopener noreferrer">https://rapidapi.com/blog/api-lifecycle-management</a>
+<a href="https://restful-api-design.readthedocs.io/en/latest/resources.html" target="_blank" rel="noopener noreferrer">https://restful-api-design.readthedocs.io/en/latest/resources.html</a></p>]]></content:encoded>
+            <author>rafaelbmateus.dev@gmail.com (Rafael Mateus)</author>
+            <category>rafaelbmateus</category>
+            <category>blog</category>
+        </item>
+    </channel>
+</rss>
